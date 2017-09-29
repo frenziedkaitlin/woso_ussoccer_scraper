@@ -1,0 +1,4 @@
+#requirements.txt
+BeautifulSoup (bs4)
+pony
+dateutil
