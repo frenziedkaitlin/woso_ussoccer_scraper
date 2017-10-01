@@ -95,17 +95,17 @@ def extract_goals(score_list):
 
 			if len(dashsplit[1].split('+')) > 1:
 				goal['minute'] = to_int(noteam.split('+')[0])
-				goal['extra'] = to_int(noteam.split('+')[1])
+				goal['stoppage'] = to_int(noteam.split('+')[1])
 			else:
 				goal['minute'] = to_int(noteam)
-				goal['extra'] =  -1
+				goal['stoppage'] =  -1
 
 			combo = noteam.split(str(goal['minute']))[0].strip()
 			if len(combo.split('(')) > 1:
-				goal['gc'] = re.sub('–', '', combo.split('(')[0]).strip()
+				goal['scored_by'] = re.sub('–', '', combo.split('(')[0]).strip()
 				goal['assist'] = combo.split('(')[1].split(')')[0].strip()
 			else:
-				goal['gc'] = re.sub("–|-", '', combo).strip()
+				goal['scored_by'] = re.sub("–|-", '', combo).strip()
 				goal['assist'] = ""
 
 			goals.append(goal)
