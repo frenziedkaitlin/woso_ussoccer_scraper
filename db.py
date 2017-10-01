@@ -25,10 +25,10 @@ class Game(db.Entity):
 
 class Goal(db.Entity):
 	id = PrimaryKey(int, auto=True)
-	gc = Required(str)
+	scored_by = Required(str)
 	minute = Required(int)
 	assist = Optional(str)
-	extra = Required(int)
+	stoppage = Required(int)
 	team = Required(str)
 	game = Required(Game)
 
@@ -69,10 +69,10 @@ def refresh():
             )
             for goal in match['goals']:
                 g.goals.add(
-                    Goal(gc=goal['gc'],
+                    Goal(scored_by=goal['scored_by'],
                         minute=goal['minute'],
                         assist=goal['assist'],
-                        extra=goal['extra'],
+                        stoppage=goal['stoppage'],
                         team=goal['team'],
                         game = g
                         ))
