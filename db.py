@@ -1,5 +1,6 @@
 from pony.orm import *
 from datetime import datetime
+from ussoccer_scrape import * 
 import os
 
 db = Database()

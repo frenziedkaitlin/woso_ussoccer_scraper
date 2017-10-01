@@ -1,9 +1,10 @@
-ffrom ussoccer_scrape import * 
 from db import * 
 
-refresh = True
 
-if refresh:
+def scrape_usscoccer():
 	refresh()
-else:
+
+
+def instantiate_ussoccer():
 	instantiate()
+

@@ -5,4 +5,4 @@ A script to scrape the USWNT results page of US Soccer's website to get informat
 
 ## Installation
 
-To install, use pip3 to install the dependencies listed in requirements.txt. To run, use `python3 hello.py`.
+To install, use pip3 to install the dependencies listed in requirements.txt. 
